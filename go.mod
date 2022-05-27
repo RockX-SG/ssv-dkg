@@ -3,9 +3,10 @@ module github.com/RockX-SG/ssv-dkg
 go 1.17
 
 require (
-	github.com/RockX-SG/bls-tss v0.0.0-20220525041312-316ca60444d9
+	github.com/RockX-SG/bls-tss v0.1.0
 	github.com/RockX-SG/eth2deposit v1.0.8
 	github.com/herumi/bls-eth-go-binary v0.0.0-20220103074059-01b0ca9e9ef7
+	github.com/sirupsen/logrus v1.8.1
 )
 
 require (
@@ -17,7 +18,6 @@ require (
 	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
 	github.com/minio/sha256-simd v1.0.0 // indirect
 	github.com/mitchellh/mapstructure v1.4.3 // indirect
-	github.com/sirupsen/logrus v1.8.1 // indirect
 	golang.org/x/crypto v0.0.0-20200510223506-06a226fb4e37 // indirect
 	golang.org/x/sys v0.0.0-20200302150141-5c8b2ff67527 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
