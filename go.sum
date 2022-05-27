@@ -1,5 +1,5 @@
-github.com/RockX-SG/bls-tss v0.1.0 h1:eqmOKw0SeNOJuKghV1+kEpRTd/cleoqo8GQJ17YdXZw=
-github.com/RockX-SG/bls-tss v0.1.0/go.mod h1:7pY1UerM/lisd3Y0MaNJXwyejybUcb1+BJyBx5PRK6o=
+github.com/RockX-SG/bls-tss v0.1.1 h1:XK8HrpzjCNRUp0dLu+4wUcGfuq4CZDXvQqsLWqxZ4SI=
+github.com/RockX-SG/bls-tss v0.1.1/go.mod h1:7pY1UerM/lisd3Y0MaNJXwyejybUcb1+BJyBx5PRK6o=
 github.com/RockX-SG/eth2deposit v1.0.8 h1:6l7+PyoS/s4Ut0hfzhXlgUU4ZXeYJF4saX4UVGOtrEE=
 github.com/RockX-SG/eth2deposit v1.0.8/go.mod h1:pxF6riqGHIPrMQ/E16IPBHq72KhCjfji+Ry1tTSzhPA=
 github.com/awnumar/memcall v0.0.0-20191004114545-73db50fd9f80 h1:8kObYoBO4LNmQ+fLiScBfxEdxF1w2MHlvH/lr9MLaTg=

@@ -3,7 +3,7 @@ module github.com/RockX-SG/ssv-dkg
 go 1.17
 
 require (
-	github.com/RockX-SG/bls-tss v0.1.0
+	github.com/RockX-SG/bls-tss v0.1.1
 	github.com/RockX-SG/eth2deposit v1.0.8
 	github.com/herumi/bls-eth-go-binary v0.0.0-20220103074059-01b0ca9e9ef7
 	github.com/sirupsen/logrus v1.8.1

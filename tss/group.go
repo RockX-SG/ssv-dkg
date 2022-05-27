@@ -176,7 +176,7 @@ func (g *GroupTwoOfThree) extractPK() {
 	if err != nil {
 		panic(err)
 	}
-	g.pkHex = localKey1.SharedKeys.Vk.BytesStr
+	g.pkHex = hex.EncodeToString(localKey1.SharedKeys.Vk.Point)
 }
 
 func (g *GroupTwoOfThree) reconstructSecret() {
@@ -202,14 +202,10 @@ func (g *GroupTwoOfThree) reconstructSecret() {
 
 func reconstructSK(lk1 localKey, lk2 localKey) (*bls.SecretKey, error) {
 	RHEX := "73eda753299d7d483339d80809a1d80553bda402fffe5bfeffffffff00000001"
-	sk1, err := hex.DecodeString(lk1.SharedKeys.SkI)
-	if err != nil {
-		return nil, err
-	}
-	sk2, err := hex.DecodeString(lk2.SharedKeys.SkI)
-	if err != nil {
-		return nil, err
-	}
+	sk1:=lk1.SharedKeys.SkI.Scalar
+
+	sk2:= lk2.SharedKeys.SkI.Scalar
+
 	rval, err := hex.DecodeString(RHEX)
 	if err != nil {
 		return nil, err
@@ -252,13 +248,17 @@ type localKey struct {
 			ShareCount int `json:"share_count"`
 		} `json:"params"`
 		Vk struct {
-			BytesStr string `json:"bytes_str"`
+			Curve string `json:"curve"`
+			Point []byte  `json:"point"`
 		} `json:"vk"`
-		SkI string `json:"sk_i"`
+		SkI struct {
+			Curve  string `json:"curve"`
+			Scalar []byte  `json:"scalar"`
+		} `json:"sk_i"`
 	} `json:"shared_keys"`
 	VkVec []struct {
 		Curve string `json:"curve"`
-		Point []int  `json:"point"`
+		Point []byte  `json:"point"`
 	} `json:"vk_vec"`
 	I int `json:"i"`
 	T int `json:"t"`

@@ -60,6 +60,7 @@ func useDkgForDepositData(group *tss.GroupTwoOfThree, data *eth2deposit.CompactD
 	if err != nil {
 		return nil, err
 	}
+	logrus.Infof("Signing root is: %x", root)
 	sigHex := group.Sign(string(root[:]))
 	sig, err := hex.DecodeString(sigHex)
 	if err != nil {
