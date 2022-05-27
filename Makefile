@@ -7,7 +7,7 @@ build: build-use-dkg build-verify
 
 .PHONY: build-use-dkg
 build-use-dkg:
-	go build -o usd-dkg examples/use-dkg.go
+	go build -o use-dkg examples/use-dkg.go
 
 .PHONY: build-verify
 build-verify:
